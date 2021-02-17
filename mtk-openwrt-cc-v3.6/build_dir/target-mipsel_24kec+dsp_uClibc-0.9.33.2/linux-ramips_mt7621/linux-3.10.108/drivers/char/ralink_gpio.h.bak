@@ -554,7 +554,6 @@ typedef struct {
 	pid_t pid;			//process id to notify
 } ralink_gpio_reg_info;
 
-// max len of string
 #define RALINK_GAIP_MAX_STR 1024
 #define RALINK_GAIP_CONT    100
 typedef struct {
