@@ -2592,7 +2592,7 @@ int __init ralink_gpio_init(void)
 #if defined (CONFIG_RALINK_MT7620)
 	gpiomode &= ~0x2000;  //clear bit[13] WLAN_LED
 #endif
-#if defined (CONFIG_RALINK_MT7621)  //sunxb add uart 
+#if defined (CONFIG_RALINK_MT7621)  // add uart 
 	gpiomode &= ~0x3C;  //clear bit[13] WLAN_LED
 #endif
 	gpiomode |= RALINK_GPIOMODE_DFT;
@@ -2673,7 +2673,7 @@ void ralink_gpio_notify_user(int usr)
 	else if (usr == 2) {
 		#if defined (CONFIG_FB_MEDIATEK_ILITEK) || defined (CONFIG_FB_MEDIATEK_TRULY)&& defined (CONFIG_RALINK_MT7621)
 		#else
-//sunxiaobo discard printk 20210122
+// discard printk 20210122
 		//printk(KERN_NOTICE NAME ": sending a SIGUSR2 to process %d\n",
 		//		ralink_gpio_info[ralink_gpio_irqnum].pid);
 		#endif
